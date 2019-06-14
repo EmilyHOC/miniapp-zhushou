@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="93d33588-2b09-47a9-85bd-1ce4ecc14b64" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="93d33588-2b09-47a9-85bd-1ce4ecc14b64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/hello.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -11,6 +22,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/personal/personal.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+>>>>>>> Stashed changes
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -62,9 +92,14 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1958" />
-    <option name="y" value="105" />
-    <option name="width" value="1225" />
+<<<<<<< Updated upstream
+    <option name="x" value="2324" />
+    <option name="y" value="259" />
+=======
+    <option name="x" value="2343" />
+    <option name="y" value="172" />
+>>>>>>> Stashed changes
+    <option name="width" value="1144" />
     <option name="height" value="767" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -152,12 +187,16 @@
       <workItem from="1560220223521" duration="614000" />
       <workItem from="1560225594906" duration="7289000" />
       <workItem from="1560246324468" duration="20593000" />
-      <workItem from="1560309030739" duration="8724000" />
+      <workItem from="1560309030739" duration="11849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="38009000" />
+=======
+    <option name="totallyTimeSpent" value="40345000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">

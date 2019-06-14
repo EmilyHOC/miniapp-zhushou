@@ -1,12 +1,20 @@
 <template>
     <div class="personal">
-        <div class="header">
-            <img src="./header.png" style="width:100%;height: 100%">
-            <div class="avatar-wrapper">
-                <img src="../../assets/img/logo.png" class="avatar">
-                <div class="name">米方</div>
-            </div>
-        </div>
+           <ul class="list">
+               <li>
+                   <span>向主播提问</span>
+                   <router-link :to = "{ path: '/questions', query: { id: 1}}">去提问</router-link>
+               </li>
+               <li>
+                   <span>提高等级</span>
+                   <router-link :to = "{ path: '/lookzhibo',query: { id: 1 }}">去看直播</router-link>
+               </li>
+               <li>
+                   <span>成为粉丝</span>
+                   <router-link :to = "{ path: '/zanshang', query: { id: 1}}">为主播投币</router-link>
+               </li>
+           </ul>
+
     </div>
 </template>
 
@@ -21,28 +29,27 @@
     height: 700px;
     color: white;
 }
-.header{
-    position: relative;
+.list{
+    padding: 0px 15px 0px 15px;
+    margin: 0;
 }
-.avatar-wrapper{
+.list li{
+    list-style: none;
+    height: 45px;
+    text-align: left;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+    line-height: 45px;
+    display: flex;
+}
+.list li span:nth-child(1){
+    flex: 1;
+}
+.list li a{
+    flex: 1;
+    text-align: right;
+    color: #ffcd32;
+    text-decoration: none;
+}
 
-}
-.header .avatar{
-    width:70px;
-    height: 70px;
-    border-radius: 35px;
-    position: absolute;
-    text-align: center;
-    top:50%;
-    left:50%;
-    margin-top:-50px;
-    margin-left:-50px;
-    border:2px solid white;
-}
-.header .avatar-wrapper .name{
-    position: absolute;
-    top:70%;
-    left:50%;
-    margin-left: -35px;
-}
 </style>

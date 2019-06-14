@@ -4,7 +4,7 @@
             <div class="avatar">
                 <img :src="item.avatar">
             </div>
-            <div class="center column-start">
+            <div class="center row-start">
                 <div class="content">{{item.content}}</div>
                 <div class="name column-end">{{item.name}}</div>
             </div>
@@ -21,9 +21,6 @@
             return {
                 dialogs: message
             }
-        },
-        mounted() {
-            console.log(message)
         }
     }
 </script>
@@ -37,6 +34,7 @@
     }
     .dialogs-wrapper{
         display: flex;
+
         margin-bottom: 10px;
         border-bottom: 1px solid #ffcd32;
     }
@@ -60,7 +58,7 @@
         display: inline-block;
         white-space: nowrap;
         overflow: hidden;
-        width:180px;
+        width:200px;
         text-overflow:ellipsis;
         white-space: nowrap;
         line-height: 36px;

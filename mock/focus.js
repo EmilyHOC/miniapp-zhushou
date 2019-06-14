@@ -1,12 +1,12 @@
-import test from '../src/assets/img/icon.png'
+// import test from '../src/assets/img/icon.png'
 const myfocus = [
     {
         name: '从前有棵树',
-        avatar: test
+        roomnum: 12333
     },
     {
         name: '山顶是个人',
-        avatar: test
+        roomnum: 23444
     }
 ]
 module.exports = {
