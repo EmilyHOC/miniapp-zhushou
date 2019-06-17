@@ -1,30 +1,64 @@
 <template>
-    <div class="questions">
+    <div class="questions" :style="{height: height} + 'px'">
         <div class="fix-wrapper">
             <img src="../../assets/img/logo.png" class="fix-avatar">
-            <span class="content">请问你有什么要悄悄告诉我的吗</span>
+            <span class="content">你有什么要悄悄告诉我的吗</span>
+        </div>
+        <div id="myquestion" class="content-right">
+
+        </div>
+        <div class="wrapper">
+            <div class="pull-question">
+                <input class="input-text" placeholder="想问我什么呀？" ref="content">
+                <i class="iconfont icon-emotion"></i>
+                <div class="send" @click="handleClick">发送</div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+
     export default {
         name: "question",
+        props: {
+            width:{
+                type: Number,
+                default: 375
+            },
+            height: {
+                type: Number,
+                default: 667
+            }
+        },
         created() {
-            var newsID = this.$route.query.id;
 
+        },
+        mounted() {
+
+        },
+        methods: {
+            handleClick() {
+                console.log(this.$refs.content.value)
+                let node = document.getElementById('myquestion')
+                let insertpos = document.createElement('p')
+                insertpos.innerHTML = this.$refs.content.value
+                this.$refs.content.value = ''
+                node.appendChild(insertpos)
+            }
         }
     }
 </script>
 
 <style scoped>
+    @import "../../assets/iconfont/iconfont.css";
     .questions{
         height: 667px;
         background-color: #2c3e50;
     }
     .fix-avatar{
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 5px;
         border:1px solid white;
     }
@@ -50,7 +84,7 @@
         font-weight: 500;
         display: inline-block;
         position: relative;
-        padding: 15px;
+        padding: 10px;
         margin-left: 10px;
         line-height: 1.2;
         text-align: left;
@@ -81,4 +115,38 @@
         left: -15px;
         z-index: 20
     }
+    .wrapper{
+        width:100%;
+        position: fixed;
+        bottom: 0;
+    }
+    .pull-question{
+        text-align: center;
+        display: flex;
+        height: 40px;
+        margin: 0 10px 5px 10px
+    }
+    .pull-question .input-text{
+        flex: 1;
+        border:1px solid #ffcd32;
+        height: 30px;
+        border-radius: 5px;
+        padding: 0px 10px;
+        font-size: 20px;
+        outline: none;
+    }
+    .pull-question i{
+        width:40px;
+        color: #ffcd32;
+    }
+    .pull-question .send{
+        height: 30px;
+        background-color: #ffcd32;
+        border-radius: 5px;
+        line-height: 30px;
+        width: 42px;
+        color: white;
+    }
+    /*发送内容的css样式*/
+
 </style>

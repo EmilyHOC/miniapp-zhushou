@@ -5,14 +5,14 @@
             <div class="zanshang-text">支持主播发出更精彩的内容</div>
             <ul class="money-wrapper">
                 <li>
-                    <div><span class="big">1</span>元</div>
-                    <div><span class="big">2</span>元</div>
-                    <div><span class="big">5</span>元</div>
+                    <div><span class="big">1</span>虎币</div>
+                    <div><span class="big">2</span>虎币</div>
+                    <div><span class="big">5</span>虎币</div>
                 </li>
                 <li>
-                    <div><span class="big">10</span>元</div>
-                    <div><span class="big">20</span>元</div>
-                    <div><span class="big">50</span>元</div>
+                    <div><span class="big">10</span>虎币</div>
+                    <div><span class="big">20</span>虎币</div>
+                    <div><span class="big">50</span>虎币</div>
                 </li>
             </ul>
         </div>
@@ -31,9 +31,8 @@
             }
         },
         created() {
-            let mywidth = document.body.scrollWidth
-            console.log(this.width)
-            this.width = mywidth
+            let myWidth = document.body.scrollWidth
+            this.width = myWidth
 
         }
     }

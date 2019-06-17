@@ -3,7 +3,7 @@
     <m-header></m-header>
     <tab></tab>
     <keep-alive>
-      <router-view></router-view>
+      <router-view :width= "width" :height= "height"></router-view>
     </keep-alive>
 
   </div>
@@ -15,6 +15,25 @@ import MHeader from "./components/m-header/m-header";
 
 export default {
   name: 'app',
+  data() {
+    return {
+      width: {
+        type: Number,
+        default: 375
+      },
+      height: {
+        type: Number,
+        default: 667
+      }
+    }
+  },
+  created() {
+    let myWidth = document.body.scrollWidth
+    let myHeight = document.body.scrollHeight
+    this.width = myWidth
+    this.height = myHeight
+    console.log(myWidth,myHeight)
+  },
   components: {
     MHeader,
     Tab

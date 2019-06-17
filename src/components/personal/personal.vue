@@ -2,16 +2,16 @@
     <div class="personal">
            <ul class="list">
                <li>
-                   <span>向主播提问</span>
-                   <router-link :to = "{ path: '/questions', query: { id: 1}}">去提问</router-link>
+                   <span><i class="iconfont icon-question"></i>向主播提问</span>
+                   <router-link :to = "{ path: '/questions', query: { id: 1}}">去提问<i class="iconfont icon-right"></i></router-link>
                </li>
                <li>
-                   <span>提高等级</span>
-                   <router-link :to = "{ path: '/lookzhibo',query: { id: 1 }}">去看直播</router-link>
+                   <span><i class="iconfont icon-golevel"></i>提高等级</span>
+                   <router-link :to = "{ path: '/lookzhibo',query: { id: 1 }}">去看直播<i class="iconfont icon-right"></i></router-link>
                </li>
                <li>
-                   <span>成为粉丝</span>
-                   <router-link :to = "{ path: '/zanshang', query: { id: 1}}">为主播投币</router-link>
+                   <span><i class="iconfont icon-befans"></i>成为粉丝</span>
+                   <router-link :to = "{ path: '/zanshang', query: { id: 1}}">为主播投币<i class="iconfont icon-right"></i></router-link>
                </li>
            </ul>
 
@@ -19,12 +19,14 @@
 </template>
 
 <script>
+
     export default {
         name: "personal"
     }
 </script>
 
 <style scoped>
+    @import "../../assets/iconfont/iconfont.css";
 .personal{
     height: 700px;
     color: white;
@@ -51,5 +53,9 @@
     color: #ffcd32;
     text-decoration: none;
 }
+.list li i{
+    margin-right: 2px;
+}
+
 
 </style>
