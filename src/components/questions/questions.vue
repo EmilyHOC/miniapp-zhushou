@@ -4,21 +4,31 @@
             <img src="../../assets/img/logo.png" class="fix-avatar">
             <span class="content">你有什么要悄悄告诉我的吗</span>
         </div>
-        <div id="myquestion" class="content-right">
-
+        <!-- 页面内容区域 -->
+        <div class="contentBox">
+            <ul>
+                <li v-for="(item,index) in content" :key="index">
+                    <span>{{item}}</span>
+                </li>
+            </ul>
         </div>
-        <div class="wrapper">
+        <div class="wrapper" ref="content">
             <div class="pull-question">
-                <input class="input-text" placeholder="想问我什么呀？" ref="content">
-                <i class="iconfont icon-emotion"></i>
+                <input class="input-text" placeholder="想问我什么呀？"  v-model="textContent">
+                <i class="iconfont icon-emotion" @click="faceContent"></i>
                 <div class="send" @click="handleClick">发送</div>
+                <div class="emotion-window" v-show="showEmotion">
+                    <ul>
+                        <li v-for="(item, index) in faceList" :key="index" @click="getEmoij(index)">{{item}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-
+    const appData = require('../../assets/emojis')
     export default {
         name: "question",
         props: {
@@ -31,6 +41,15 @@
                 default: 667
             }
         },
+        data() {
+          return {
+              showEmotion: false,
+              faceList: [],
+              getEmoijString: '',
+              textContent: '',
+              content: []
+          }
+        },
         created() {
 
         },
@@ -39,12 +58,52 @@
         },
         methods: {
             handleClick() {
-                console.log(this.$refs.content.value)
-                let node = document.getElementById('myquestion')
-                let insertpos = document.createElement('p')
-                insertpos.innerHTML = this.$refs.content.value
-                this.$refs.content.value = ''
-                node.appendChild(insertpos)
+                 if(this.textContent == '')
+                     return alert("请输入内容")
+                 //存入
+                this.content.push(this.textContent)
+                //清空input
+                this.textContent = ''
+                //关闭表情列表
+                // this.faceList = false
+                this.showEmotion = false
+                this.$refs.content.style.bottom = 5 +'px'
+                // console.log(this.$refs.content.value)
+                // let node = document.getElementById('myquestion')
+                // let insertpos = document.createElement('div')
+                // insertpos.style.backgroundColor = '#ffcd32'
+                // insertpos.style.color = 'white'
+                // insertpos.style.height = 40 + 'px'
+                // insertpos.style.lineHeight = 40 +'px'
+                // insertpos.style.borderRadius = 5 + 'px'
+                // insertpos.style.overflow = 'hidden'
+                // insertpos.style.maxWidth = 280 + 'px'
+                // insertpos.style.marginLeft = 20 + 'px'
+                // insertpos.style.marginTop = 10 + 'px'
+                // insertpos.innerHTML = this.$refs.content.value
+                // this.$refs.content.value = ''
+                // node.appendChild(insertpos)
+            },
+            faceContent() {
+                this.showEmotion = !this.showEmotion
+                this.$refs.content.style.bottom = 200 +'px'
+                if(this.showEmotion == true){
+                    for(let i in appData) {
+                        this.faceList.push(appData[i].char)
+                    }
+                }else {
+                    this.faceList = []
+                    this.$refs.content.style.bottom = 5 +'px'
+                }
+            },
+            getEmoij(index) {
+                //获取用户点击之后的标签，存到输入框里
+                for(let i in this.faceList) {
+                    if(index == i){
+                        this.getEmoijString = this.faceList[index];
+                        this.textContent += this.getEmoijString
+                    }
+                }
             }
         }
     }
@@ -96,7 +155,6 @@
         font-size: 18px;
         color: white;
         background:-webkit-gradient(linear, left top, left bottom, from(#ffcd32), to(#f3961c));
-    　　background:linear-gradient(top, #f9d835, #f3961c);
     }
     .content:after{
         /*容器后面添加一个空元素，长度和宽度设为0*/
@@ -118,13 +176,13 @@
     .wrapper{
         width:100%;
         position: fixed;
-        bottom: 0;
+        bottom: 5px;
     }
     .pull-question{
         text-align: center;
         display: flex;
         height: 40px;
-        margin: 0 10px 5px 10px
+        margin: 0 10px 0px 10px
     }
     .pull-question .input-text{
         flex: 1;
@@ -147,6 +205,58 @@
         width: 42px;
         color: white;
     }
-    /*发送内容的css样式*/
+    .contentBox ul{
+        padding-left: 20px;
+        position: relative;
+    }
+    .contentBox li{
+        list-style: none;
+        background-color: #ffcd32;
+        line-height: 30px;
+        border-radius: 5px;
+        color: white;
+        margin-right: 60px;
+        margin-bottom: 5px;
+        background:-webkit-gradient(linear, left top, left bottom, from(#ffcd32), to(#f3961c));
+        word-break: normal;
+        word-wrap: break-word;
+
+    }
+    .emotion-window{
+        position: fixed;
+        display: inline-block;
+        bottom: 0;
+        width: 90%;
+        height: 185px;
+        background-color: rgba(95, 83, 83, .5);
+        /*border: 1px solid #eee;*/
+        margin-bottom: 5px;
+    }
+    .emotion-window ul{
+        padding-left: 0;
+    }
+    .emotion-window li{
+        list-style: none;
+        display: inline;
+        width: 10%;
+        float: left;
+    }
+    .emotion-window:after{
+        content: "\00a0";
+        width: 0;
+        height: 0;
+        /*指定这个空元素为块级元素*/
+        display: block;
+        border-style: solid;
+        border-width: 8px;
+        border-color:  transparent  transparent  rgba(95, 83, 83, .5) transparent;
+        /*指定空元素的定位方式为absolute*/
+        position: absolute;
+        bottom:50%;
+        transform: translateY(50%);
+        z-index: 20;
+        right: 30px;
+        top: -24px;
+    }
 
 </style>
