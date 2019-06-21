@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router'
-import focus from '../components/focus/focus'
+import tietu from '../components/tietu/tietu'
 import dialogs from '../components/dialogs/dialogs'
 import personal from '../components/personal/personal'
 import questions from '../components/questions/questions'
@@ -12,8 +12,8 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
-            path: '/focus',
-            component: focus
+            path: '/tietu',
+            component: tietu
         },
         {
             path: '/dialogs',

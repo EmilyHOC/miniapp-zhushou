@@ -1,7 +1,7 @@
 <template>
     <div class="tab">
-        <router-link tag="div" class="tab-item" to="/focus">
-            <span class="tab-link">关注</span>
+        <router-link tag="div" class="tab-item" to="/tietu">
+            <span class="tab-link">贴图</span>
         </router-link>
         <router-link tag="div" class="tab-item" to="/dialogs">
             <span class="tab-link">消息</span>

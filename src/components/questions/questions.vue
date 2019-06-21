@@ -14,7 +14,7 @@
         </div>
         <div class="wrapper" ref="content">
             <div class="pull-question">
-                <input class="input-text" placeholder="想问我什么呀？"  v-model="textContent">
+                <input class="input-text" placeholder="想问我什么呀？"  v-model="textContent" id="dbl">
                 <i class="iconfont icon-emotion" @click="faceContent"></i>
                 <div class="send" @click="handleClick">发送</div>
                 <div class="emotion-window" v-show="showEmotion">
@@ -54,7 +54,6 @@
 
         },
         mounted() {
-
         },
         methods: {
             handleClick() {
@@ -65,24 +64,8 @@
                 //清空input
                 this.textContent = ''
                 //关闭表情列表
-                // this.faceList = false
                 this.showEmotion = false
                 this.$refs.content.style.bottom = 5 +'px'
-                // console.log(this.$refs.content.value)
-                // let node = document.getElementById('myquestion')
-                // let insertpos = document.createElement('div')
-                // insertpos.style.backgroundColor = '#ffcd32'
-                // insertpos.style.color = 'white'
-                // insertpos.style.height = 40 + 'px'
-                // insertpos.style.lineHeight = 40 +'px'
-                // insertpos.style.borderRadius = 5 + 'px'
-                // insertpos.style.overflow = 'hidden'
-                // insertpos.style.maxWidth = 280 + 'px'
-                // insertpos.style.marginLeft = 20 + 'px'
-                // insertpos.style.marginTop = 10 + 'px'
-                // insertpos.innerHTML = this.$refs.content.value
-                // this.$refs.content.value = ''
-                // node.appendChild(insertpos)
             },
             faceContent() {
                 this.showEmotion = !this.showEmotion
@@ -105,6 +88,7 @@
                     }
                 }
             }
+
         }
     }
 </script>
@@ -206,11 +190,11 @@
         color: white;
     }
     .contentBox ul{
-        padding-left: 20px;
+        padding-left: 60px;
         position: relative;
     }
     .contentBox li{
-        list-style: none;
+        list-style: square;
         background-color: #ffcd32;
         line-height: 30px;
         border-radius: 5px;
@@ -220,6 +204,8 @@
         background:-webkit-gradient(linear, left top, left bottom, from(#ffcd32), to(#f3961c));
         word-break: normal;
         word-wrap: break-word;
+        text-align: left;
+        padding: 3px;
 
     }
     .emotion-window{
