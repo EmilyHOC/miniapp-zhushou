@@ -1,19 +1,15 @@
 <template>
   <div id="streamerApp">
-    <img alt="Vue logo" src="./assets/img/icon.png">
-    <HelloWorld msg="Welcome to Your Vue.js Ext App"/>
-    <h2>Streamer side</h2>
+    stremApp
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'streamerApp',
-  components: {
-    HelloWorld
-  }
+
 }
 </script>
 

@@ -21,7 +21,7 @@
 <style scoped>
     .tab{
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         color: white;
         margin-top: 15px;
     }

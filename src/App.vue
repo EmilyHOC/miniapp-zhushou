@@ -2,10 +2,7 @@
   <div id="app">
     <m-header></m-header>
     <tab></tab>
-    <keep-alive>
-      <router-view :width= "width" :height= "height"></router-view>
-    </keep-alive>
-
+    <router-view :width= "width" :height= "height"></router-view>
   </div>
 </template>
 
@@ -29,7 +26,7 @@ export default {
   },
   created() {
     let myWidth = document.body.scrollWidth
-    let myHeight = document.body.scrollHeight
+    let myHeight = document.documentElement.clientHeight - 70
     this.width = myWidth
     this.height = myHeight
     console.log(myWidth,myHeight)

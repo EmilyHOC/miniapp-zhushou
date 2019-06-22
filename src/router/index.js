@@ -4,8 +4,9 @@ import tietu from '../components/tietu/tietu'
 import dialogs from '../components/dialogs/dialogs'
 import personal from '../components/personal/personal'
 import questions from '../components/questions/questions'
-import lookzhibo from '../components/look-zhibo/look-zhibo'
 import zanshang from '../components/zanshang/zanshang'
+import messages from '../components/messages/messages'
+import billbord from '../components/billborad/billbord'
 
 Vue.use(Router)
 
@@ -24,18 +25,21 @@ export default new Router({
             component: personal
         },
         {
-            path: '/questions',
-            component: questions
-        },
-        {
-            path: '/lookzhibo',
-            component: lookzhibo
+            path: '/messages',
+            component: messages
         },
         {
             path: '/zanshang',
             component: zanshang
+        },
+        {
+            path: '/billbord',
+            component: billbord
+        },
+        {
+            path: '/questions',
+            component: questions
         }
-
     ]
 })
 

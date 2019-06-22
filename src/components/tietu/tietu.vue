@@ -24,43 +24,43 @@
         <div class="avatar-list">
             <li>
                 <span class="niao">
-                    <img src="../../assets/img/avatar1.png" @click="handleClick(1)">
+                    <img :src= "imgData[1]" @click="handleClick(1)">
                     <p>火烈鸟</p>
                 </span>
                 <span class="huli">
-                    <img src="../../assets/img/avatar2.png" @click="handleClick(2)">
+                    <img :src= "imgData[2]" @click="handleClick(2)">
                     <p>狐狸</p>
                 </span>
                 <span class="monky">
-                    <img src="../../assets/img/avatar3.png" @click="handleClick(3)">
+                    <img :src= "imgData[3]" @click="handleClick(3)">
                     <p>猴子</p>
                 </span>
             </li>
             <li>
                 <span class="lujiao">
-                    <img src="../../assets/img/avatar4.png" @click="handleClick(4)">
+                    <img :src= "imgData[4]" @click="handleClick(4)">
                     <p>鹿角</p>
                 </span>
                 <span class="hua">
-                    <img src="../../assets/img/avatar5.png" @click="handleClick(5)">
+                    <img :src= "imgData[5]" @click="handleClick(5)">
                     <p>花</p>
                 </span>
                 <span class="shuaige">
-                    <img src="../../assets/img/avatar6.png" @click="handleClick(6)">
+                    <img :src= "imgData[6]" @click="handleClick(6)">
                     <p>帅哥</p>
                 </span>
             </li>
             <li>
                 <span class="maomaochong">
-                    <img src="../../assets/img/avatar7.png" @click="handleClick(7)">
+                    <img :src= "imgData[7]" @click="handleClick(7)">
                     <p>毛毛虫</p>
                 </span>
                 <span class="xiaoji">
-                    <img src="../../assets/img/avatar8.png" @click="handleClick(8)">
+                    <img :src= "imgData[8]" @click="handleClick(8)">
                     <p>小鸡</p>
                 </span>
                 <span class="xiaoji">
-                    <img src="../../assets/img/avatar9.png" @click="handleClick(9)">
+                    <img :src= "imgData[9]" @click="handleClick(9)">
                     <p>小草</p>
                 </span>
             </li>
@@ -100,8 +100,6 @@
             handleClick(index) {
                 console.log('click',index)
                 this.index = index
-                console.log(this.$refs.beijing)
-                document.getElementById('beijing').style.backgroundImage = this.imgData[0].url
             }
         }
     }

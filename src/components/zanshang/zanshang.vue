@@ -16,6 +16,9 @@
                 </li>
             </ul>
         </div>
+        <div class="clickbtn">
+            赞赏
+        </div>
     </div>
 </template>
 
@@ -89,6 +92,17 @@
      font-size: 25px;
      margin-right:2px;
  }
+  .clickbtn{
+      display: inline-block;
+      width: 330px;
+      height: 40px;
+      background-color: #ffcd32;
+      line-height: 40px;
+      border-radius: 20px;
+      margin-top: 5px;
+      color: #14799e;
+
+  }
 
 
 

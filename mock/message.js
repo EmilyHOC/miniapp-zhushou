@@ -1,21 +1,22 @@
+
 const message = [
     {
-        name: 'wang',
-        avatar:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2922170376,2371336021&fm=27&gp=0.jpg',
-        content: '你好,sfdfcfdfsfdscdscsdcdscdsc',
-        time: '刚刚'
+        name: '番茄酱',
+        avatar: 'http://img5.imgtn.bdimg.com/it/u=607399474,2894130457&fm=26&gp=0.jpg',
+        content: '那就这样吧！',
+        time: '7:56'
     },
     {
-        name: 'wang',
-        content: '你好csdccccccccccccccccccccccccccccccccccc',
-        avatar:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2922170376,2371336021&fm=27&gp=0.jpg',
-        time: '刚刚'
+        name: 'Joano',
+        content: '五一节快乐，吃饭了吗',
+        avatar: 'http://img5.imgtn.bdimg.com/it/u=607399474,2894130457&fm=26&gp=0.jpg',
+        time: '7:51'
     },
     {
-        name: 'wang',
-        content: '你好csdcdddddddddddddddd',
-        avatar:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2922170376,2371336021&fm=27&gp=0.jpg',
-        time: '刚刚'
+        name: '张希',
+        content: '对方已成功接收文件',
+        avatar: 'http://img5.imgtn.bdimg.com/it/u=607399474,2894130457&fm=26&gp=0.jpg',
+        time: '7:21'
     }
 
 ]
